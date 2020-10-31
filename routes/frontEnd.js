@@ -1,15 +1,17 @@
 const router = require("express").Router();
 const path = require("path");
+const db = require("../models")
 
 // Front End Routes
 // GET route to display Workout
-app.get("/workout", (req, res) => {
-    res.sendFile(path.join(__dirname, ""));
+router.get("/workout", (req, res) => {
+    // res.sendFile(path.join(__dirname, "index"));
+    res.send("CONNECTED");
 })
 
 // GET route to display Training
-app.get("/training", (req, res) => {
-    res.sendFile(path.join(__dirname, ""));
-})
+// router.get("/training", (req, res) => {
+//     res.sendFile(path.join(__dirname, ""));
+// })
 
-module.exoports = router;
+module.exports = router;

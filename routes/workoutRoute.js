@@ -26,31 +26,31 @@ router.post("/", ({body}, res) => {
 })
 
 // PUT route to update workout
-router.put("/update/:id", (req, res) => {
-    db.Workout.updateOne({
-        _id: mongojs.ObjectId(req.params.id)
-    })
-    .then(result => {
-        res.json(result);
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).end();
-    })
-})
+// router.put("/update/:id", (req, res) => {
+//     db.Workout.updateOne({
+//         _id: mongojs.ObjectId(req.params.id)
+//     })
+//     .then(result => {
+//         res.json(result);
+//     })
+//     .catch(err => {
+//         console.log(err);
+//         res.status(500).end();
+//     })
+// })
 
 // DELETE route to delete workout
-router.delete("/delete/:id", (req, res) => {
-    db.Workout.deleteOne({
-        _id: mongojs.ObjectId(req.params.id)
-    })
-    .then(result => {
-        res.json(result);
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).end();
-    })
-})
+// router.delete("/delete/:id", (req, res) => {
+//     db.Workout.deleteOne({
+//         _id: mongojs.ObjectId(req.params.id)
+//     })
+//     .then(result => {
+//         res.json(result);
+//     })
+//     .catch(err => {
+//         console.log(err);
+//         res.status(500).end();
+//     })
+// })
 
 module.exports = router;
