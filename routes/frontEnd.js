@@ -4,7 +4,7 @@ const db = require("../models")
 
 // Front End Routes
 // GET route to display Workout
-router.get("/workout", (req, res) => {
+router.get("/combinationWorkoutAndTraining", (req, res) => {
     db.Workout.find({})
     .populate("Training")
     .then(result => {

@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 
 // POST route to create training
 router.post("/", ({body}, res) => {
-    db.Workout.create({})
+    db.Workout.create(body)
     .then(result => {
         res.json(result);
     })
@@ -26,9 +26,11 @@ router.post("/", ({body}, res) => {
 })
 
 // UPDATE route
-// app.put("/update/:id", (req, res) => {
-//     db.Workout.updateOne({
+// router.put("/", (req, res) => {
+//     db.Training.findOneAndUpdate({
 //         _id: mongojs.ObjectId(req.params.id)
+//     },{
+
 //     })
 //     .then(result => {
 //         res.json(result);
@@ -40,8 +42,8 @@ router.post("/", ({body}, res) => {
 // })
 
 // DELETE route
-// app.delete("/delete/:id", (req, res) => {
-//     db.Workout.deleteOne({
+// router.delete("/", (req, res) => {
+//     db.Training.deleteOne({
 //         _id: mongojs.ObjectId(req.params.id)
 //     })
 //     .then(result => {

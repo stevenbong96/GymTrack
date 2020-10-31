@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 
 // POST route to create workout
 router.post("/", ({body}, res) => {
-    db.Workout.create({})
+    db.Workout.create(body)
     .then(result => {
         res.json(result);
     })
@@ -24,20 +24,6 @@ router.post("/", ({body}, res) => {
         res.status(500).end();
     })
 })
-
-// PUT route to update workout
-// router.put("/update/:id", (req, res) => {
-//     db.Workout.updateOne({
-//         _id: mongojs.ObjectId(req.params.id)
-//     })
-//     .then(result => {
-//         res.json(result);
-//     })
-//     .catch(err => {
-//         console.log(err);
-//         res.status(500).end();
-//     })
-// })
 
 // DELETE route to delete workout
 // router.delete("/delete/:id", (req, res) => {

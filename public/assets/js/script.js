@@ -36,7 +36,7 @@ $("#updateTraining").on("click", () => {
     // Get
 
     $.ajax({
-        url: "",
+        url: "/api/training",
         method: "PUT",
         data: 
     }).then(response => {
@@ -47,7 +47,7 @@ $("#updateTraining").on("click", () => {
 // To delete workout
 $("#deleteTraining").on("click", () => {
     $.ajax({
-        url: "",
+        url: "/api/training",
         method: "DELETE",
         data:
     }).then(response => {
