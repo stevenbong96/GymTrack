@@ -16,11 +16,15 @@ $(".addWorkout").on("submit", event => {
 
     // AJAX Call
     $.ajax({
-        url: "",
+        url: "/api/workout",
         method: "POST",
         data: {
             name: workoutName,
-
+            // trainingType: training.name,
+            sets: setsNumber,
+            reps: repsNumber,
+            break: breakDuration,
+            description: description
         }
     }).then(response => {
         console.log(response);

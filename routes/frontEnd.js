@@ -5,13 +5,17 @@ const db = require("../models")
 // Front End Routes
 // GET route to display Workout
 router.get("/workout", (req, res) => {
-    // res.sendFile(path.join(__dirname, "index"));
-    res.send("CONNECTED");
-})
+    db.Workout.find({})
+    .populate("Training")
+    .then(result => {
+        res.render("index.handlebars", {
 
-// GET route to display Training
-// router.get("/training", (req, res) => {
-//     res.sendFile(path.join(__dirname, ""));
-// })
+        })
+    }).catch(err => {
+        console.log(err);
+        res.status(500).end();
+    })
+    // res.send(path.join(__dirname, "index"))
+})
 
 module.exports = router;

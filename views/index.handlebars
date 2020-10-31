@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col s12 m12 l12">
+        <div class="card">
+            <div class="card-content white-text">
+                <span class="card-title grey">Workout Name</span>
+                <form id="{{_id}}">
+                    <div class="row">
+                        <div class="col s3 m3">
+                            <label for="trainingName">Name of Training </label>
+                            <input type="text" name="trainingName" value="{{name}}">
+                        </div>
+
+                        <div class="col s3 m3">
+                            <label for="setsAndReps">Number of Sets and Reps </label>
+                            <div class="row">
+                                <div class="col s6 m6">
+                                    <input type="text" name="setsName" id="" placeholder="# of sets" value="{{sets}}">
+                                </div>
+                                <div class="col s6 m6">
+                                    <input type="text" name="repsName" id="" placeholder="# of reps" value="{{reps}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s3 m3">
+                            <label for="break">Break: </label>
+                            <input type="text" name="break" id="" placeholder="# of minutes" value="{{break}}">
+                        </div>
+
+                        <div class="col s3 m3">
+                            <label for="description">Description: </label>
+                            <textarea id="icon_prefix2" class="materialize-textarea" value="{{description}}">{{description}}</textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s4 m4">
+
+                        </div>
+
+                        <div class="col s4 m4">
+                            <button type="submit" id="updateTraining" id="{{_id}}">Update</button>
+                            <button type="submit" id="deleteTraining" id="{{_id}}">Delete</button>
+                        </div>
+
+                        <div class="col s4 m4">
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
