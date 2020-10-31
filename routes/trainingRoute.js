@@ -33,10 +33,10 @@ app.put("/update/:id", (req, res) => {
     .then(result => {
         res.json(result);
     })
-    .catch(err => [
+    .catch(err => {
         console.log(err);
         res.status(500).end();
-    ])
+    })
 })
 
 // DELETE route
