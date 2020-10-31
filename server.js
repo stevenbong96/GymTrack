@@ -17,21 +17,11 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", { useNewUrlParser: true });
 
-// GET route
-app.get("/", (req, res) => {
-    db.User.find({})
-    .then(result => {
-        res.json(result);
-    })
-    .catch(err => {
-        console.log(err);
-    })
-})
 
 // POST route
-app.post("/submit", ({body}, res) => {
+// app.post("/submit", ({body}, res) => {
     
-})
+// })
 
 // UPDATE route
 app.put("/update/:id", (req, res) => {
