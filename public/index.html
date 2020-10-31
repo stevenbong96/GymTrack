@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Link to Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Workout Tracker</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container formStyle">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Workout Name</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Type of Training</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">Number of Sets</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Number of Reps</label>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Break</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Description</label>
+                    </div>
+                </div>
+
+                <button type="submit" clas="formSubmit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card">
+                    <div class="card-content white-text">
+                        <span class="card-title grey">Workout Name</span>
+                        <div class="row">
+                            <div class="col s3 m3">
+                                <label for="trainingName">Name of Training </label>
+                                <input type="text" name="trainingName" id="">
+                            </div>
+
+                            <div class="col s3 m3">
+                                <label for="setsAndReps">Number of Sets and Reps </label>
+                                <div class="row">
+                                    <div class="col s6 m6">
+                                        <input type="text" name="setsName" id="" placeholder="# of sets">
+                                    </div>
+                                    <div class="col s6 m6">
+                                        <input type="text" name="repsName" id="" placeholder="# of reps">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s3 m3">
+                                <label for="break">Break: </label>
+                                <input type="text" name="trainingName" id="" placeholder="# of minutes">
+                            </div>
+
+                            <div class="col s3 m3">
+                                <label for="description">Description: </label>
+                                <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s4 m4">
+
+                            </div>
+
+                            <div class="col s4 m4">
+                                <button type="submit">Update</button>
+                                <button type="submit">Delete</button>
+                            </div>
+
+                            <div class="col s4 m4">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Compressed JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Link to JS file -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

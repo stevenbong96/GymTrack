@@ -9,9 +9,9 @@ const trainingSchema = new Schema({
   description: {
     type: String,
   },
-  duration: {
-    type: String,
-  },
+  // duration: {
+  //   type: String,
+  // },
   sets: {
     type: String,
   },
