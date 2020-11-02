@@ -27,29 +27,32 @@ $(".addWorkout").on("submit", event => {
             description: description
         }
     }).then(response => {
-        console.log(response);
+        
+        // redirectMain()
     })
 })
 
-// To update workout
-$("#updateTraining").on("click", () => {
-    // Get
+function redirectMain () {
+    window.location.replace("/workoutCard")
+}
 
+function updateExercise (id) {
     $.ajax({
-        url: "/api/training",
+        url: "/api/workouts/" +id,
         method: "PUT",
-        data: 
+        data: "cats"
     }).then(response => {
         console.log(response);
     })
-})
+}
+// To update workout
+$("#updateTraining").on("click", updateExercise)
 
 // To delete workout
 $("#deleteTraining").on("click", () => {
     $.ajax({
-        url: "/api/training",
+        url: "/api/delete/" + id,
         method: "DELETE",
-        data:
     }).then(response => {
         console.log(response)
     })

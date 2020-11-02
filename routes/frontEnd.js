@@ -4,7 +4,7 @@ const db = require("../models")
 
 // Front End Routes
 // GET route to display Workout
-router.get("/combinationWorkoutAndTraining", (req, res) => {
+router.get("/", (req, res) => {
     db.Workout.find({})
     .populate("Training")
     .then(result => {
@@ -16,6 +16,17 @@ router.get("/combinationWorkoutAndTraining", (req, res) => {
         res.status(500).end();
     })
     // res.send(path.join(__dirname, "index"))
+})
+
+router.get("/workoutCard", (req, res) => {
+    db.Workout.find({})
+    .populate("Training")
+    .then(result => {
+        res.render("workoutCard.handlebars", result)
+    }).catch(err => {
+        console.log(err);
+        res.status(500).end();
+    })
 })
 
 module.exports = router;

@@ -19,13 +19,14 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", { useNewUrlParser: true });
 
 const frontEndRoutes = require("./routes/frontEnd");
 app.use("/", frontEndRoutes);
 
 const workoutRoutes = require("./routes/workoutRoute");
-app.use("/api/workout", workoutRoutes);
+app.use("/", workoutRoutes);
 
 const trainingRoutes = require("./routes/trainingRoute");
 app.use("/api/training", trainingRoutes);
