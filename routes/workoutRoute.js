@@ -6,11 +6,15 @@ const db = require("../models");
 
 // POST route to create workout
 router.post("/api/workout", (req, res) => {
-    let data = req.body
+    // let data = req.body
     console.log(req.body)
     db.Workout.create({
-        name: data.name,
-        sets: data.sets
+        name: req.body.name,
+        trainingName: req.body.trainingName,
+        sets: req.body.sets,
+        reps: req.body.reps,
+        break: req.body.break,
+        description: req.body.description,
     })
     .then(result => {
         res.json(result);

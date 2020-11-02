@@ -19,10 +19,15 @@ router.get("/", (req, res) => {
 })
 
 router.get("/workoutCard", (req, res) => {
-    db.Workout.find({})
-    .populate("Training")
+    db.Workout.find({}).lean()
+    // .populate("Training")
     .then(result => {
-        res.render("workoutCard.handlebars", result)
+        console.log("HELLLOOOO")
+        console.log(result);
+        res.render("index.handlebars", 
+        {workout: result})
+        // res.render("workoutCard.handlebars", 
+        // {workout: result})
     }).catch(err => {
         console.log(err);
         res.status(500).end();

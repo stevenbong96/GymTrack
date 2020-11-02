@@ -1,6 +1,15 @@
+// const { response } = require("express");
+
 $(document).ready(function(){
     $('.sidenav').sidenav();
 });
+
+// $.ajax({
+//     url: "/workoutCard",
+//     method: "GET"
+// }).then(result => {
+    
+// })
 
 // To add workout
 $(".addWorkout").on("submit", event => {
@@ -20,7 +29,7 @@ $(".addWorkout").on("submit", event => {
         method: "POST",
         data: {
             name: workoutName,
-            // trainingType: training.name,
+            trainingName: trainingType,
             sets: setsNumber,
             reps: repsNumber,
             break: breakDuration,
@@ -28,7 +37,7 @@ $(".addWorkout").on("submit", event => {
         }
     }).then(response => {
         
-        // redirectMain()
+        redirectMain()
     })
 })
 

@@ -41,7 +41,7 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="break" type="text" class="validate">
+                        <input id="break" type="text" class="validate" placeholder="# of seconds">
                         <label for="break">Break</label>
                     </div>
                 </div>
@@ -58,3 +58,13 @@
         </div>
     </div>
 
+    {{#if workout}}
+    {{#each workout}}
+        {{> workoutCard}}
+    
+    {{/each}}
+    {{else}}
+    <div class="emptyInfo">
+        <h1>No Workouts Have Been Created!</h1>
+    </div>
+    {{/if}}
