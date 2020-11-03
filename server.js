@@ -26,7 +26,7 @@ const frontEndRoutes = require("./routes/frontEnd");
 app.use("/", frontEndRoutes);
 
 const workoutRoutes = require("./routes/workoutRoute");
-app.use("/", workoutRoutes);
+app.use("/api/workout", workoutRoutes);
 
 const trainingRoutes = require("./routes/trainingRoute");
 app.use("/api/training", trainingRoutes);

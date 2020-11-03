@@ -47,20 +47,20 @@ function redirectMain () {
 
 function updateExercise (id) {
     $.ajax({
-        url: "/api/workouts/" +id,
+        url: "/api/workout/" + id,
         method: "PUT",
-        data: "cats"
+        // data: "cats"
     }).then(response => {
         console.log(response);
     })
 }
 // To update workout
-$("#updateTraining").on("click", updateExercise)
+$("#cardForm").on("submit", updateExercise)
 
 // To delete workout
 $("#deleteTraining").on("click", () => {
     $.ajax({
-        url: "/api/delete/" + id,
+        url: "/api/workout/" + id,
         method: "DELETE",
     }).then(response => {
         console.log(response)
