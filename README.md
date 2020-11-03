@@ -34,7 +34,7 @@ To use the badges, feel free to check [shields.io](https://shields.io/) website 
 ## Test Instruction 
 Proof of test result of this application works (Shown by Connection ID)
 
-![Test Results](./public/assets/image/TestResult.JPG)
+![Test Results](./public/assets/images/TestResult.JPG)
 
 ## License 
   
@@ -42,4 +42,4 @@ MIT License
 
 ## Application Screenshot
 
-![Screenshot](./public/assets/image/screenshot.JPG)
+![Screenshot](./public/assets/images/screenshot.JPG)
